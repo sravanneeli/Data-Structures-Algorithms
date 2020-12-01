@@ -1,8 +1,10 @@
 def factorial(n):
+    if n < 0:
+        print("Please pass positive number")
+        return
     if n == 0:
         return 1
-    else:
-        return factorial(n - 1) * n
+    return factorial(n - 1) * n
 
 def main():
     n = 15
