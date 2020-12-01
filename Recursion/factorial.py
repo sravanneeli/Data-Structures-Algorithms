@@ -5,7 +5,9 @@ def factorial(n):
         return factorial(n - 1) * n
 
 def main():
-    pass
+    n = 15
+    factn = factorial(n)
+    print("Factorial of {} is {}".format(n, factn))
 
 if __name__ == "__main__":
     main()
