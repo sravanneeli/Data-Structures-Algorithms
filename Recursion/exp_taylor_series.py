@@ -11,6 +11,9 @@ def exp(x, n):
 
 
 def main():
-    print(exp(3,10))
+    x = 3
+    n = 10 # till ho wmany terms exponentail should be approximated
+    print("Exponential of {} with {} terms is: {}".format(x, n ,exp(x, n)))
+
 
 main()
