@@ -4,7 +4,7 @@ import math
 def binary_search(A, key):
     l = 0
     h = len(A)
-    while (l < h):
+    while (l <= h):
         mid = math.floor((l + h) / 2)
 
         if A[mid] == key:
@@ -18,7 +18,7 @@ def binary_search(A, key):
 # Recursive Approach
 def rbinary_search(A, l, h, key):
 
-    if l < h:
+    if l <= h:
         mid = math.floor((l + h) / 2)
 
         if A[mid] == key:
@@ -32,12 +32,12 @@ def rbinary_search(A, l, h, key):
 
 def main():
     A = [3, 4, 5, 10, 20, 25, 28, 29]
-    index = binary_search(A,28)
+    index = binary_search(A,29)
     if index == -1:
         print("Key not found")
     else:
         print("Key found at index: {}".format(index))
-    index = rbinary_search(A, 0, len(A), 6)
+    index = rbinary_search(A, 0, len(A), 3)
     if index == -1:
         print("Key not found")
     else:
