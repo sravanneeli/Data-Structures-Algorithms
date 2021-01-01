@@ -40,7 +40,7 @@ def add_sparse(s1, s2):
     else:
         return "Dimensions of matrices doesn't match."
 
-
+# Given non zero values should be row wise and sorted
 def main():
     s1 = Sparse()
     s1 = create(s1)
