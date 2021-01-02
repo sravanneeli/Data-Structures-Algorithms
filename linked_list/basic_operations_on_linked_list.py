@@ -1,4 +1,4 @@
-from display_linked_list import create_ll
+from linked_list.display_linked_list import create_ll
 import math
 
 # Count number of elements using loop apporoach
