@@ -1,7 +1,7 @@
 from linked_list.display_linked_list import create_ll
 import math
 
-# Count number of elements using loop apporoach
+# Count number of elements using loop approach
 def count_ll(p):
     c = 0
     while p:
@@ -9,7 +9,7 @@ def count_ll(p):
         p = p.next
     return c
 
-# Count number of elements using recursive apporoach
+# Count number of elements using recursive approach
 def count_rec(p):
     if p:
         return count_rec(p.next) + 1
