@@ -1,5 +1,6 @@
 from linked_list import LinkedList
 from display_linked_list import create_ll
+import math
 
 # Count number of elements using loop apporoach
 def count_ll(p):
@@ -16,6 +17,20 @@ def count_rec(p):
     else:
         return 0
 
+# Sum of elements of linked list
+def sum_ll(p):
+    if p:
+        return sum_ll(p.next) + p.data
+    else:
+        return 0
+
+def max_ll(p):
+    if p:
+        x = max_ll(p.next)
+        return x if x > p.data else p.data
+    else:
+        return -999999
+        
 def main():
     A = [3, 5, 7, 10, 15]
     ll = LinkedList()
@@ -23,6 +38,8 @@ def main():
     count = count_ll(ll.head)
     print("Number of elements in Linked list : {}".format(count))
     print("Number of elements in Linked list : {}".format(count_rec(ll.head)))
+    print("Sum of all elements in the Linked List: {}".format(sum_ll(ll.head)))
+    print("Max of all elements in the Linked List: {}".format(max_ll(ll.head)))
 
 if __name__ == "__main__":
     main()
