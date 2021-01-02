@@ -9,4 +9,3 @@ def main():
     B = [0, 1, 4]
     print("Minimum steps to cover the start point to end point:",coverPoints(A, B))
 
-main()

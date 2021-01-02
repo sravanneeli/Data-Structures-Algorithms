@@ -12,4 +12,3 @@ def main():
     arr = [-6, 3, -8, 10, 5, -7, -9, 12, -4, 2]
     print("negatives to left and positives to right:", neg_to_left(arr))
 
-main()

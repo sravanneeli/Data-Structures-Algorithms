@@ -37,6 +37,5 @@ def main():
     mergesort(arr, 0, len(arr) - 1)
     print("Sorted Array:", arr)
 
-
 if __name__ == "__main__":
     main()

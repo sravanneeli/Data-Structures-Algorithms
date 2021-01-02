@@ -12,4 +12,5 @@ def main():
     n = 10 # till ho wmany terms exponentail should be approximated
     print("Exponential of {} with {} terms is: {}".format(x, n ,exp_horner(x, n)))
 
-main()
+if __name__ == "__main__":
+    main()

@@ -9,5 +9,5 @@ def funcB(n):
     if n > 1:
         print(n)
         funcA(n//2)
-
-funcA(20)
+if __name__ == "__main__":
+    funcA(20)

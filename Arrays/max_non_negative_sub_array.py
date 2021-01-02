@@ -37,4 +37,3 @@ def main():
     A = [ 0, 0, -1, 0 ]
     print(max_non_negative(A))
 
-main()

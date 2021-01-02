@@ -20,4 +20,3 @@ def main():
     print("Reversed array",reverse(arr))
     print("array is sorted or not ?", checksorted(arrsorted))
 
-main()

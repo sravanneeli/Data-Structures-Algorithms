@@ -17,4 +17,5 @@ def main():
     print("{} term of fibonacci series is : {}".format(n ,fib(n)))
 
 
-main()
+if __name__ == "__main__":
+    main()

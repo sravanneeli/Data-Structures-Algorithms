@@ -45,5 +45,3 @@ def main():
     print("Missing Element in the array is :", *multiple_missing_numbers(arr3))
     print("Missing Element in the array is :", *get_missing_numbers(arr4, nmax))
 
-if __name__ == "__main__":
-    main()

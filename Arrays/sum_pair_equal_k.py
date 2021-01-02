@@ -1,16 +1,19 @@
 def sorted_pair_k(arr, k):
-    i = 0; j = len(arr) - 1
+    i = 0
+    j = len(arr) - 1
     pairs = []
     while i < j:
         if arr[i] + arr[j] == k:
             pairs.append((arr[i], arr[j]))
-            i += 1; j -= 1
+            i += 1
+            j -= 1
         elif arr[i] + arr[j] < k:
             i += 1
         else:
             j -= 1
 
     return pairs
+
 
 def sum_pair_k(arr, k):
     n = max(arr) + 1
@@ -32,5 +35,5 @@ def main():
     print("Pairs when sum is {} and array is sorted: {}".format(k, sorted_pair_k(arr, k)))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

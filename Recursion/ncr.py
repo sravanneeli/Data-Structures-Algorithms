@@ -7,4 +7,5 @@ def ncr(n, r):
 def main():
     print(ncr(5, 3))
 
-main()
+if __name__ == "__main__":
+    main()

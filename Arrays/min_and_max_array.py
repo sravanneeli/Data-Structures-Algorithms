@@ -15,5 +15,3 @@ def main():
     print("Max and Min of the array is {}, {}".format(max_ele, min_ele))
 
 
-if __name__ == "__main__":
-    main()

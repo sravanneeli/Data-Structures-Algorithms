@@ -16,4 +16,5 @@ def main():
     print("Exponential of {} with {} terms is: {}".format(x, n ,exp(x, n)))
 
 
-main()
+if __name__ == "__main__":
+    main()

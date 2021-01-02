@@ -20,6 +20,5 @@ def main():
     arr = [25, 17, 31, 13, 2]
     print("Sorted Array:", insertion_sort(arr))
     
-
 if __name__ == "__main__":
     main()

@@ -15,5 +15,3 @@ def main():
     print("Duplicate Elements and there Counts:", get_duplicates_and_count(arr))
 
 
-if __name__ == "__main__":
-    main()

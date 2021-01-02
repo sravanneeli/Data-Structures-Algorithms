@@ -30,4 +30,5 @@ def main():
         [ 7, 8, 9 ]]
     print(spiralOrder(A))
     
-main()
+if __name__ == "__main__":
+    main()

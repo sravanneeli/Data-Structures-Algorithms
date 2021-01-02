@@ -23,4 +23,3 @@ def main():
     C = merge(A, B)
     print("Merged Array", C)
 
-main()

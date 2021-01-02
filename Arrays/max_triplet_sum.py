@@ -20,4 +20,3 @@ def main():
     A = [2, 5, 3, 1, 4, 9]
     print(triplet_sum(A))
 
-main()

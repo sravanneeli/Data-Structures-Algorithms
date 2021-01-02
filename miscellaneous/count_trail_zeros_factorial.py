@@ -10,4 +10,5 @@ def main():
     n = int(input("Enter a number: "))
     print("Number of trailing zeros of given number factorial: ", count_trail_zeros(n))
 
-main()
+if __name__ == "__main__":
+    main()
