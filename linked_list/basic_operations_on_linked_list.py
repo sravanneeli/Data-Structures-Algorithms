@@ -29,7 +29,7 @@ def max_ll(p):
         x = max_ll(p.next)
         return x if x > p.data else p.data
     else:
-        return -999999
+        return -math.inf
         
 def main():
     A = [3, 5, 7, 10, 15]
