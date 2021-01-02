@@ -1,45 +1,49 @@
 from linked_list.linked_list_class import LinkedList, Node
 
+
 # Create Linked list from given array
-def create_ll(A):
+def create_ll(arr):
     ll = LinkedList()
-    ll.head = Node(A[0])
+    ll.head = Node(arr[0])
     temp = ll.head
-    for i in range(1, len(A)):
-        temp.next = Node(A[i])
+    for i in range(1, len(arr)):
+        temp.next = Node(arr[i])
         temp = temp.next
 
-    return ll 
+    return ll
+
 
 # Display Linked List Elements using loop
 def display_ll(p):
     while p:
-        print(p.data, end = ' ')
+        print(p.data, end=' ')
         p = p.next
     print()
 
-# Display Linked List Reursively
-def disp_rec(p):
+
+# Display Linked List Recursively
+def display_rec(p):
     if p:
-        print(p.data, end = ' ')
-        disp_rec(p.next)
+        print(p.data, end=' ')
+        display_rec(p.next)
+
 
 # Reverse display of linked list
-def disp_rev(p):
+def display_rev(p):
     if p:
-        disp_rec(p.next)
-        print(p.data, end = ' ')
-    
+        display_rec(p.next)
+        print(p.data, end=' ')
+
 
 def main():
-    A = [3, 5, 7, 10, 15]
-    ll = create_ll(A)
+    arr = [3, 5, 7, 10, 15]
+    ll = create_ll(arr)
     display_ll(ll.head)
-    disp_rec(ll.head)
+    display_rec(ll.head)
     print()
-    disp_rev(ll.head)
+    display_rev(ll.head)
     print()
-    
+
 
 if __name__ == "__main__":
     main()
