@@ -12,7 +12,7 @@ def search(p, key):
 
 # Recursive approach
 def search_rec(p, key):
-    if p == None:
+    if p is None:
         return None
     if p.data == key:
         return p
@@ -20,8 +20,8 @@ def search_rec(p, key):
 
 
 def main():
-    A = [3, 5, 7, 10, 15]
-    ll = create_ll(A)
+    arr = [3, 5, 7, 10, 15]
+    ll = create_ll(arr)
 
     temp = search(ll.head, 10)
 
@@ -30,10 +30,10 @@ def main():
     else:
         print("Key not found")
 
-    tempR = search_rec(ll.head, 15)
+    tempr = search_rec(ll.head, 15)
 
-    if tempR:
-        print("Key is found", tempR.data)
+    if tempr:
+        print("Key is found", tempr.data)
     else:
         print("Key not found")
 
