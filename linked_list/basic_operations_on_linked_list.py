@@ -1,4 +1,3 @@
-from linked_list import LinkedList
 from display_linked_list import create_ll
 import math
 
@@ -33,7 +32,6 @@ def max_ll(p):
         
 def main():
     A = [3, 5, 7, 10, 15]
-    ll = LinkedList()
     ll = create_ll(A)
     count = count_ll(ll.head)
     print("Number of elements in Linked list : {}".format(count))
@@ -43,4 +41,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

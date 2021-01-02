@@ -1,4 +1,4 @@
-from .linked_list_class import LinkedList, Node
+from linked_list.linked_list_class import LinkedList, Node
 
 # Create Linked list from given array
 def create_ll(A):
