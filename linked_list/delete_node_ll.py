@@ -4,11 +4,16 @@ Two cases
     2. Delete a Node at a given position
 """
 from linked_list.display_linked_list import create_ll, display_ll
+from linked_list.basic_operations_on_linked_list import count_ll
 
 
 def delete_node(pos, ll, p):
     q = None
     x = None
+
+    if pos < 1 or pos > count_ll(p):
+        return x
+
     if pos == 1:
         x = ll.head.data
         ll.head = ll.head.next
@@ -20,7 +25,7 @@ def delete_node(pos, ll, p):
 
         if p:
             q.next = p.next
-            x = p.next
+            x = p.data
             del p
     return x
 
@@ -28,9 +33,20 @@ def delete_node(pos, ll, p):
 def main():
     A = [5, 3, 2, 12, 21, 5]
     ll = create_ll(A)
-    delete_node(1, ll, ll.head)  # delete first Node
-    delete_node(5, ll, ll.head)  # delete last Node
-    display_ll(ll.head)
+    if delete_node(1, ll, ll.head):  # delete first Node
+        display_ll(ll.head)
+    else:
+        print("Given index is not in the range to delete the element")
+
+    if delete_node(5, ll, ll.head):  # delete last Node
+        display_ll(ll.head)
+    else:
+        print("Given index is not in the range to delete the element")
+
+    if delete_node(10, ll, ll.head):  # when index not in the range
+        display_ll(ll.head)
+    else:
+        print("Given index is not in the range to delete the element")
 
 
 if __name__ == '__main__':
