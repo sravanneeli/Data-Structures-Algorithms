@@ -3,6 +3,7 @@ from linked_list.linked_list_class import Node, LinkedList
 from linked_list.basic_operations_on_linked_list import count_ll
 
 
+# insert a node at a given position
 def insert(p, pos, x, ll):
     if pos < 0 or pos > count_ll(p):
         return
@@ -11,7 +12,7 @@ def insert(p, pos, x, ll):
         t.next = ll.head
         ll.head = t
     else:
-        for i in range(pos-1):
+        for i in range(pos - 1):
             p = p.next
         t.next = p.next
         p.next = t
@@ -26,7 +27,7 @@ def main():
     display_ll(ll.head)
     insert(ll.head, 4, 8, ll)  # insert in middle
     display_ll(ll.head)
-    new_ll = LinkedList()
+    new_ll = LinkedList()  # insertion in empty linked list
     insert(new_ll.head, 0, 8, new_ll)
     insert(new_ll.head, 1, 3, new_ll)
     insert(new_ll.head, 2, 6, new_ll)
