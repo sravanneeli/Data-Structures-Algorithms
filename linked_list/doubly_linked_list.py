@@ -99,6 +99,21 @@ class DoublyLinkedList:
             p = p.next
         print()
 
+    def reverse(self):
+        """
+        this method reverses the doubly linked list
+        :return: None
+        """
+        p = self.head
+        temp = None
+        while p is not None:
+            temp = p.prev
+            p.prev = p.next
+            p.next = temp
+            p = p.prev
+        if temp is not None:
+            self.head = temp.prev
+
 
 def main():
     arr = [3, 2, 5, 1, 6, 10, 11]
@@ -116,6 +131,9 @@ def main():
     dl.delete_node(1)  # delete first element of the linked list
     dl.display()
     dl.delete_node(9)  # delete the last element of the linked list
+    dl.display()
+    dl.reverse()
+    print("Reverse of doubly linked list is:", end=' ')
     dl.display()
 
 
