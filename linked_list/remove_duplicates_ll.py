@@ -22,7 +22,7 @@ def main():
     A = [3, 5, 5, 8, 8, 8, 9]
     ll = create_ll(A)
     remove_dup(ll.head)
-    print("Linked List after removing duplicates : {}".format(display_ll(ll.head)))
+    print("Linked List after removing duplicates : {}".format(ll.display()))
 
 
 if __name__ == '__main__':

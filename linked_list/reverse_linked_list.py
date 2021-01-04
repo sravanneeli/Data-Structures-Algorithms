@@ -49,13 +49,13 @@ def main():
     reverse_aux(ll)
     print("Original Linked List: {}".format(A))
     print("Reversed Linked List using auxiliary array:", end=' ')
-    display_ll(ll.head)
+    ll.display()
     print("Reversed Linked List using Loop approach:", end=' ')
     reverse(ll)
-    display_ll(ll.head)
+    ll.display()
     print("Reversed Linked List using Recursive approach:", end=' ')
     reverse_rec(ll.head, ll)
-    display_ll(ll.head)
+    ll.display()
 
 
 if __name__ == '__main__':

@@ -4,7 +4,7 @@
         2. Merging two sorted Linked Lists
 """
 
-from linked_list.display_linked_list import create_ll, display_ll
+from linked_list.display_linked_list import create_ll
 
 
 # Concatenation
@@ -56,7 +56,7 @@ def merge_func(a, b):
     ll2 = create_ll(b)
     ll3 = merge(ll1, ll2)
     print("Merged Linked List: ", end=' ')
-    display_ll(ll3.head)
+    ll3.display()
 
 
 def main():
@@ -66,7 +66,7 @@ def main():
     ll2 = create_ll(B)
     concat(ll1, ll2)
     print("Concatenated Linked List: ", end=' ')
-    display_ll(ll1.head)
+    ll1.display()
     merge_func(A, B)
 
 

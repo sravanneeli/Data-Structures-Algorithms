@@ -1,6 +1,5 @@
-from linked_list.linked_list_class import Node, LinkedList
-from linked_list.display_linked_list import display_ll
 from linked_list.insertion_in_ll import insert
+from linked_list.linked_list_class import Node, LinkedList
 
 
 # insertion a element in sorted linked list
@@ -30,11 +29,11 @@ def main():
     insert_in_sorted_ll(8, ll.head, ll)  # insertion at middle
     insert_in_sorted_ll(1, ll.head, ll)  # insertion at starting
     insert_in_sorted_ll(25, ll.head, ll)  # insertion at ending
-    display_ll(ll.head)  # display linked list after inserting the element
+    ll.display()  # display linked list after inserting the element
     new_ll = LinkedList()
     insert_in_sorted_ll(55, new_ll.head, new_ll)  # inserting when no node is there
     insert_in_sorted_ll(50, new_ll.head, new_ll)  # insert new element for new element
-    display_ll(new_ll.head)
+    new_ll.display()
 
 
 if __name__ == '__main__':

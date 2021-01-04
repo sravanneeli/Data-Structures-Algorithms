@@ -4,14 +4,13 @@ Two cases
     2. Delete a Node at a given position
 """
 from linked_list.display_linked_list import create_ll, display_ll
-from linked_list.basic_operations_on_linked_list import count_ll
 
 
 def delete_node(pos, ll, p):
     q = None
     x = None
 
-    if pos < 1 or pos > count_ll(p):
+    if pos < 1 or pos > ll.count():
         return x
 
     if pos == 1:

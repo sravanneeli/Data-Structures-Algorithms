@@ -1,11 +1,10 @@
 from linked_list.display_linked_list import create_ll, display_ll
 from linked_list.linked_list_class import Node, LinkedList
-from linked_list.basic_operations_on_linked_list import count_ll
 
 
 # insert a node at a given position
 def insert(p, pos, x, ll):
-    if pos < 0 or pos > count_ll(p):
+    if pos < 0 or pos > ll.count():
         return
     t = Node(x)
     if pos == 0:
