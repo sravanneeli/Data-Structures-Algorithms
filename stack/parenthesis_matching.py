@@ -3,22 +3,26 @@
 """
 from stack.stack_class import Stack
 
+bracket_dict = {')': '(', ']': '[', '}': '{'}
+
 
 def is_balanced(exp):
     st = Stack(len(exp))
     st.create()
     for i in range(len(exp)):
-        if exp[i] == '(':
+        if exp[i] == '(' or exp[i] == '[' or exp[i] == '{':
             st.push(exp[i])
-        elif exp[i] == ')':
+        elif exp[i] == ')' or exp[i] == ']' or exp[i] == '}':
             if st.is_empty():
                 return False
-            st.pop()
+            x = st.pop()
+            if bracket_dict[exp[i]] != x:
+                return False
     return st.is_empty()
 
 
 def main():
-    exp = '((a+b)*(c-d))'
+    exp = '({a+b}*(c-d))'
     print("The expression parenthesis are balanced or not ?", is_balanced(exp))
 
 
