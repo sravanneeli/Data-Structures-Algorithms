@@ -7,6 +7,11 @@ bracket_dict = {')': '(', ']': '[', '}': '{'}
 
 
 def is_balanced(exp):
+    """
+    Check whether all the parenthesis are balanced are not
+    :param exp: expression in string format
+    :return: True or False
+    """
     st = Stack(len(exp))
     st.create()
     for i in range(len(exp)):
