@@ -16,8 +16,9 @@ class Stack:
         the user
         :return: None
         """
-        self.size = int(input("Enter size of the stack to be created: "))
-        self.arr = [0] * self.size
+        if self.size == 0:
+            self.size = int(input("Enter size of the stack to be created: "))
+        self.arr = [None] * self.size
 
     def display(self):
         """
