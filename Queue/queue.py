@@ -95,6 +95,9 @@ class LinkedListQueue:
             temp = temp.next
         print()
 
+    def is_empty(self):
+        return self.front is None
+
 
 def queue_main():
     print("Queue using Array or List")
