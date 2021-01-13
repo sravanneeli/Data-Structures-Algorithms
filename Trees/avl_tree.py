@@ -53,6 +53,41 @@ class AVLTree:
         if self.root == parent:
             self.root = plr
 
+        return plr
+
+    def rr_rotation(self, parent):
+        pr = parent.right
+        prl = pr.left
+
+        pr.left = parent
+        parent.right = prl
+        parent.height = self.node_height(parent)
+        pr.height = self.node_height(pr)
+
+        if self.root == parent:
+            self.root = pr
+
+        return pr
+
+    def rl_rotation(self, parent):
+        pr = parent.right
+        prl = pr.left
+
+        pr.left = prl.right
+        parent.right = prl.left
+
+        prl.right = pr
+        prl.left = parent
+
+        pr.height = self.node_height(pr)
+        parent.height = self.node_height(parent)
+        prl.height = self.node_height(prl)
+
+        if self.root == parent:
+            self.root = prl
+
+        return prl
+
     def __rec_insert(self, temp, key):
         if temp is None:
             new_node = AVLNode(key)
@@ -68,6 +103,10 @@ class AVLTree:
             self.ll_rotation(temp)
         elif self.balance_factor(temp) == 2 and self.balance_factor(temp.left) == -1:
             self.lr_rotation(temp)
+        elif self.balance_factor(temp) == -2 and self.balance_factor(temp.right) == -1:
+            self.rr_rotation(temp)
+        elif self.balance_factor(temp) == -2 and self.balance_factor(temp.right) == 1:
+            self.rl_rotation(temp)
 
         return temp
 
@@ -80,9 +119,9 @@ class AVLTree:
 
 def main():
     tree = AVLTree()
-    tree.rec_insert(50)
     tree.rec_insert(10)
-    tree.rec_insert(20)
+    tree.rec_insert(50)
+    tree.rec_insert(30)
     print(tree.root.right.data)
 
 
