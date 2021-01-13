@@ -100,13 +100,13 @@ class AVLTree:
         temp.height = self.node_height(temp)
 
         if self.balance_factor(temp) == 2 and self.balance_factor(temp.left) == 1:
-            self.ll_rotation(temp)
+            return self.ll_rotation(temp)
         elif self.balance_factor(temp) == 2 and self.balance_factor(temp.left) == -1:
-            self.lr_rotation(temp)
+            return self.lr_rotation(temp)
         elif self.balance_factor(temp) == -2 and self.balance_factor(temp.right) == -1:
-            self.rr_rotation(temp)
+            return self.rr_rotation(temp)
         elif self.balance_factor(temp) == -2 and self.balance_factor(temp.right) == 1:
-            self.rl_rotation(temp)
+            return self.rl_rotation(temp)
 
         return temp
 
@@ -116,13 +116,27 @@ class AVLTree:
         else:
             self.__rec_insert(self.root, key)
 
+    def __in_order(self, p):
+        if p:
+            self.__in_order(p.left)
+            print(p.data, end=' ')
+            self.__in_order(p.right)
+
+    def in_order(self):
+        self.__in_order(self.root)
+
 
 def main():
     tree = AVLTree()
     tree.rec_insert(10)
-    tree.rec_insert(50)
+    tree.rec_insert(20)
     tree.rec_insert(30)
-    print(tree.root.right.data)
+    tree.rec_insert(25)
+    tree.rec_insert(28)
+    tree.rec_insert(27)
+    tree.rec_insert(5)
+    print(tree.root.left.data, tree.root.right.data, tree.root.right.left.data)
+    tree.in_order()
 
 
 if __name__ == '__main__':

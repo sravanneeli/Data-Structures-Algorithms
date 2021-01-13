@@ -86,7 +86,7 @@ class Tree:
                 return y + 1
 
     def Height(self):
-        self.height(self.root)
+        return self.height(self.root)
 
 
 def main():
