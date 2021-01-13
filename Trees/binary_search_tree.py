@@ -48,7 +48,10 @@ class BST(Tree):
         return temp
 
     def rec_insert(self, key):
-        self.__rec_insert(self.root, key)
+        if self.root is None:
+            self.root = self.__rec_insert(self.root, key)
+        else:
+            self.__rec_insert(self.root, key)
 
     @staticmethod
     def __inorder_predecessor(p):
