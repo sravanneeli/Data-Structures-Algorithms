@@ -6,7 +6,8 @@
 """
 
 
-def insertion_sort(arr):
+def insertion_sort(a):
+    arr = a.copy()
     n = len(arr)
     for i in range(1, n):
         x = arr[i]

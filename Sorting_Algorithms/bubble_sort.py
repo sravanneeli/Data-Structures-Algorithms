@@ -1,4 +1,5 @@
-def bubble_sort(arr):
+def bubble_sort(a):
+    arr = a.copy()
     n = len(arr)
     for i in range(n):
         flag = True
@@ -13,8 +14,8 @@ def bubble_sort(arr):
 
 
 def main():
-    arr = [8, 5, 7, 3, 2]
-    print(f"sorted array : {bubble_sort(arr)}")
+    A = [8, 5, 7, 3, 2]
+    print(f"sorted array : {bubble_sort(A)}")
 
 
 if __name__ == '__main__':
