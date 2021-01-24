@@ -41,7 +41,7 @@ def merge_iter(a):
         p *= 2
 
     if p // 2 < n:
-        merge(arr, 0, p//2, n-1)
+        merge(arr, 0, (p//2)-1, n-1)
     return arr
 
 
@@ -54,7 +54,7 @@ def mergesort(arr, start, end):
 
 
 def main():
-    arr = [14, 7, 3, 12, 9, 11, 6, 2, 15]
+    arr = [11, 13, 7, 12, 16, 9, 24, 5, 10, 3]
     print(f"sorted array using iterative merge sort :{merge_iter(arr)}")
     mergesort(arr, 0, len(arr)-1)
     print("Sorted Array:", arr)
