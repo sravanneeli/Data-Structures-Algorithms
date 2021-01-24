@@ -55,7 +55,7 @@ def mergesort(arr, start, end):
 
 def main():
     arr = [11, 13, 7, 12, 16, 9, 24, 5, 10, 3]
-    print(f"sorted array using iterative merge sort :{merge_iter(arr)}")
+    print(f"Sorted array using iterative merge sort :{merge_iter(arr)}")
     mergesort(arr, 0, len(arr)-1)
     print("Sorted Array:", arr)
 
