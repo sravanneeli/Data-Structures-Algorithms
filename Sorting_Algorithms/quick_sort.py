@@ -1,3 +1,11 @@
+"""
+    Quick Sort:
+    Worst Time Complexity   : O(n^2)
+    Best Time Complexity    : O(nlogn)
+    Average Time Complexity : O(nlogn)
+"""
+
+
 def partition(arr, low, high):
     i = low - 1
     pivot = arr[high]
