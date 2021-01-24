@@ -26,7 +26,8 @@ def merge(arr, start, mid, end):
         arr[i] = temp[i - start]
 
 
-def merge_iter(arr):
+def merge_iter(a):
+    arr = a.copy()
     n = len(arr)
     p = 2
     while p <= n:
@@ -41,6 +42,7 @@ def merge_iter(arr):
 
     if p // 2 < n:
         merge(arr, 0, p//2, n-1)
+    return arr
 
 
 def mergesort(arr, start, end):
@@ -53,8 +55,8 @@ def mergesort(arr, start, end):
 
 def main():
     arr = [14, 7, 3, 12, 9, 11, 6, 2, 15]
-    # mergesort(arr, 0, len(arr) - 1)
-    merge_iter(arr)
+    print(f"sorted array using iterative merge sort :{merge_iter(arr)}")
+    mergesort(arr, 0, len(arr)-1)
     print("Sorted Array:", arr)
 
 
