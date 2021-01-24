@@ -1,3 +1,11 @@
+"""
+    Selection Sort:
+    Worst Time Complexity   : O(n^2)
+    Best Time Complexity    : O(n^2)
+    Average Time Complexity : O(n^2)
+"""
+
+
 def selection_sort(a):
     arr = a.copy()
     n = len(arr)

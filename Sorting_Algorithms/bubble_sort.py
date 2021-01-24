@@ -1,3 +1,11 @@
+"""
+    Bubble Sort:
+    Worst Time Complexity   : O(n^2)
+    Best Time Complexity    : O(n)
+    Average Time Complexity : O(n^2)
+"""
+
+
 def bubble_sort(a):
     arr = a.copy()
     n = len(arr)
