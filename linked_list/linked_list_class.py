@@ -69,3 +69,30 @@ class LinkedList:
             print(p.data, end=' ')
             p = p.next
         print()
+
+    # insertion a element in sorted linked list
+    def insert_in_sorted_ll(self, x):
+        q = None
+        t = Node(x)
+        p = self.head
+        if self.head is None:
+            self.head = t
+        else:
+            while p and p.data < x:
+                q = p
+                p = p.next
+
+            if p is self.head:
+                t.next = self.head
+                self.head = t
+            else:
+                t.next = q.next
+                q.next = t
+
+    def search(self, key):
+        p = self.head
+        while p:
+            if p.data == key:
+                return p
+            else:
+                p = p.next
