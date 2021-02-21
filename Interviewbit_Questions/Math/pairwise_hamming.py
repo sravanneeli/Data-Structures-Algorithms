@@ -20,15 +20,12 @@ def hammingDistance(A):
     for i in range(n):
         new.append(get_bin(A[i]))
     dist = 0
-    for i in range(31, -1, -1):
-        x, y = 0, 0
-        for j in range(n):
-            if new[j][i]:
+    for i in range(32):
+        x = 0
+        for num in A:
+            if num & (1 << i):
                 x += 1
-            else:
-                y += 1
-
-        dist += 2 * x * y
+        dist += 2 * x * (n - x)
         dist = dist % mod
     return dist
 
