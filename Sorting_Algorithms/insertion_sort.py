@@ -7,12 +7,12 @@
 
 
 def insertion_sort(a):
-    arr = a.copy()
+    arr = a
     n = len(arr)
     for i in range(1, n):
         x = arr[i]
         j = i - 1
-        while j > -1 and arr[j] > x:
+        while j > -1 and arr[j][1] < x[1]:
             arr[j + 1] = arr[j]
             j -= 1
         arr[j + 1] = x
@@ -20,7 +20,7 @@ def insertion_sort(a):
 
 
 def main():
-    arr = [25, 17, 31, 13, 2]
+    arr = [[0, 2], [1, 2], [2, 2], [3, 2], [4, 2]]
     print("Sorted Array:", insertion_sort(arr))
 
 

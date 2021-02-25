@@ -1,23 +1,19 @@
-def time2min(time):
-    if "AM" in time:
-        if time[:2] != '12':
-            ans = int(time[:2]) * 60 + int(time[3:5])
-        else:
-            ans = int(time[3:5])
-    else:
-        if time[:2] != '12':
-            ans = (int(time[:2]) + 12) * 60 + int(time[3:5])
-        else:
-            ans = 720 + int(time[3:5])
+for _ in range(int(input())):
+    n = int(input())
+    arr = list(map(int, input().split()))
+    new = []
+    output = [0] * n
+    for i in range(n):
+        new.append([i, arr[i]])
+    for i in range(1, n):
+        x = new[i]
+        j = i - 1
+        while j > -1 and new[j][1] < x[1]:
+            new[j + 1] = new[j]
+            j -= 1
+        new[j + 1] = x
 
-    return ans
+    for i in range(n):
+        output[new[i][0]] = i + 1
 
-
-def main():
-    time1 = "01:01 PM"
-    time2 = "02:01 AM"
-    print(time2min(time1), time2min(time2))
-
-
-if __name__ == '__main__':
-    main()
+    print(*output)
