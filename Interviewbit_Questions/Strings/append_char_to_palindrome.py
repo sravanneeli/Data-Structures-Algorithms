@@ -1,7 +1,9 @@
 """
-Given an string A. The only operation allowed is to insert characters in the beginning of the string.
+Problem Description
 
-Find how many minimum characters are needed to be inserted to make the string a palindrome string.
+Given a string A consisting of lowercase characters.
+
+We need to tell minimum characters to be appended (insertion at end) to make the string A a palindrome.
 """
 
 
@@ -27,7 +29,7 @@ def compute_lps(pat):
 
 def main():
     pat = "aaabaaa"
-    print(len(pat) - compute_lps(pat + '$' + pat[::-1])[-1])
+    print(len(pat) - compute_lps(pat[::-1] + '$' + pat)[-1])
 
 
 if __name__ == '__main__':
